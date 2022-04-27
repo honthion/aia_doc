@@ -1,0 +1,1740 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AIA PES",
+		"_postman_id": "e933a599-edf2-22fa-d86f-0347b6d15f13",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "xapi~bff",
+			"description": "",
+			"item": [
+				{
+					"name": "common",
+					"description": "",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"url": "{{xapi_host}}/index",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint1",
+					"description": "",
+					"item": [
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/uipendings",
+							"request": {
+								"url": "{{xapi_host}}/agents/policies/uiPendingItems",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"orderBy\": 0,\r\n  \"period\": 0,\r\n  \"policyNumber\": \"string\",\r\n  \"selectedAgent\": \"string\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/directreports",
+							"request": {
+								"url": "{{xapi_host}}/agents/{{agentId}}/directreports",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"orderBy\": 0,\r\n  \"period\": 0,\r\n  \"policyNumber\": \"string\",\r\n  \"selectedAgent\": \"string\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint2",
+					"description": "",
+					"item": [
+						{
+							"name": "/life-policies/{header:x-aiahk-policy-id}/general-info",
+							"request": {
+								"url": "{{xapi_host}}/life-policies/{{policyId}}/get-general-info",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/pl-policies/{header:x-aiahk-policy-id}/general-info",
+							"request": {
+								"url": "{{xapi_host}}/pl-policies/{{policyId}}/getGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/pl-policies/{header:x-aiahk-policy-id}/coverage-info",
+							"request": {
+								"url": "{{xapi_host}}/pl-policies/{{policyId}}/getCoverageInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/pa-policies/{header:x-aiahk-policy-id}/general-info",
+							"request": {
+								"url": "{{xapi_host}}/pa-policies/{{policyId}}/getGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/pa-policies/{header:x-aiahk-policy-id}/coverage-info",
+							"request": {
+								"url": "{{xapi_host}}/pa-policies/{{policyId}}/getCoverageInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/policies/{header:x-aiahk-policy-id}/other-policies",
+							"request": {
+								"url": {
+									"raw": "{{xapi_host}}/agents/{{agentId}}/policies/{{policyId}}/other-policies?",
+									"host": [
+										"{{xapi_host}}"
+									],
+									"path": [
+										"agents",
+										"{{agentId}}",
+										"policies",
+										"{{policyId}}",
+										"other-policies"
+									],
+									"query": [
+										{
+											"key": "agentId",
+											"value": "\"123\"",
+											"disabled": true
+										},
+										{
+											"key": "policyId",
+											"value": "\"PT1001\"",
+											"disabled": true
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint3",
+					"description": "",
+					"item": [
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/pos",
+							"request": {
+								"url": {
+									"raw": "{{xapi_host}}/agents/agentId/pos?status=non-completed",
+									"host": [
+										"{{xapi_host}}"
+									],
+									"path": [
+										"agents",
+										"agentId",
+										"pos"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "non-completed",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en_US",
+										"description": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"non-completed\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/{header:x-aiahk-policy-id}/pos",
+							"request": {
+								"url": "{{xapi_host}}/policies/{{policyId}}/pos",
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"description": "",
+										"disabled": true
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/pos/{request-id}",
+							"request": {
+								"url": "{{xapi_host}}/pos/P1",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"completeFlag\":\"P1\",\r\n    \"requestDate\":\"1\",\r\n    \"lang\":\"1\",\r\n    \"sentOutDate\":\"1\"\r\n\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/claims",
+							"request": {
+								"url": {
+									"raw": "{{xapi_host}}/agents/{{agentId}}/claims?status=non-completed",
+									"host": [
+										"{{xapi_host}}"
+									],
+									"path": [
+										"agents",
+										"{{agentId}}",
+										"claims"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "non-completed",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en_US",
+										"description": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"non-completed\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/{header:x-aiahk-policy-id}/claims",
+							"request": {
+								"url": "{{xapi_host}}/policies/{{policyId}}/claims",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/claims/{claim-id}",
+							"request": {
+								"url": "{{xapi_host}}/claims/{{claimId}}",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"occurNo\":\"1\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/agents/{header:x-aiahk-agent-id}/vitalities",
+							"request": {
+								"url": {
+									"raw": "{{xapi_host}}/agents/{{agentId}}/vitalities?memberName=12&membershipDueDate=1&membershipNumber=2&membershipStatus=1&policyId=BT111&selectedAgentId=11",
+									"host": [
+										"{{xapi_host}}"
+									],
+									"path": [
+										"agents",
+										"{{agentId}}",
+										"vitalities"
+									],
+									"query": [
+										{
+											"key": "memberName",
+											"value": "12",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "membershipDueDate",
+											"value": "1",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "membershipNumber",
+											"value": "2",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "membershipStatus",
+											"value": "1",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "policyId",
+											"value": "BT111",
+											"equals": true,
+											"description": ""
+										},
+										{
+											"key": "selectedAgentId",
+											"value": "11",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/vitalities/{membership-id}",
+							"request": {
+								"url": {
+									"raw": "{{xapi_host}}/vitalities/{{membershipId}}",
+									"host": [
+										"{{xapi_host}}"
+									],
+									"path": [
+										"vitalities",
+										"{{membershipId}}"
+									],
+									"query": [
+										{
+											"key": "memberName",
+											"value": "12",
+											"disabled": true
+										},
+										{
+											"key": "membershipDueDate",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "membershipNumber",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "membershipStatus",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "policyId",
+											"value": "BT111",
+											"disabled": true
+										},
+										{
+											"key": "selectedAgentId",
+											"value": "11",
+											"disabled": true
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/{header:x-aiahk-policy-id}/levy-history",
+							"request": {
+								"url": "{{xapi_host}}/policies/{{policyId}}/get-levy-history",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en_US",
+										"description": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"non-completed\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/{header:x-aiahk-policy-id}/payment-info",
+							"request": {
+								"url": "{{xapi_host}}/policies/{{policyId}}/get-payment-info",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzc29JZCI6IkVkUmZyTkhybWR0eS9BV292N3dMWmdLTE1TOWxQSjZyQStwOGl0eCtjT1RoOXk2SFpZVldpblU5c2VRdi9Pb0dyVXN4dVphQXNGNHcxQXNVU09ZaXZGRWJxWmNjRms4TFhOTlBTQzJSd3plbjRBOGU0RCtMNUxKd2hweWtnbUJQa3cvei9MWUhONVA0RFU0aHkwRWFoVk81akJtbmN0aUZnSnhoenI5RWxDQlZaUzJiZE5wbVhobm14NFplcDdqVU82bFhob0UzSEs5OVBjd1JBVWpINTNhN1lNSzh4Y1F0OWFVSmd4VnJWUEVIa3FhQTJIRFZ3a1lhaENobmRmb0NPMzFNVENvUUl4dUtCbUYrN2V4MThUWCtrN2lMNzRqVXhmQzRWSEczT1JhQlVhbzF6M2Y4Vzh3bi8wR2Z5ZERhYUNKaG4vWWRqRnBsbE9IUWFIckpuQT09IiwiZXBsIjoiRHpzZllYMTdvT0ZOVFFXSnVBZHZMVHpUWlBQcWxhU21nbFVtUFRtam5jMFd5aVRrOFhvT2ZiemErMEpRK0duL3VPZ0R3T1ltWkFqN0twZkZSUHVJbWJKQk1kQlJpc0RzbUxtYWdsc2FxNkRGcTJIWDV6QlVqZ2ErdlJJNG1aVThwc0JOaXY5SG9QK3hVUjA5WG9HaFVzc2dpWTRVOTVkSEwyWExua0lHMTNrQ3I2eUtpTUFLQmlrOTZzOGhraGM5TUNuTjNvaE9NTU9KWFJUd2NkM1pFbmtvbGNvL3Jqc1REeTJYOXhjYXVBTUJHRDI5ci9jU2UxRHVFajI1d1NDU2g0LzFUTFhIMm5rTVVuTFZOMldDOGFxV252QjdqTkZBVFBMTVNTRnZDZXJnSDFIakloclBFK2V4YlRtSmVsNVE0bkQvYkk5M0tsYzBXMlJZc0ZJbkFRPT0iLCJlaWQiOiJUbmtuTFRPMEc2ZVN1Nm9hOGQvVnBoeHhaazI1UDFtNGhSc0tzZ3JTV21uWDdYaFpHWTJKbEthNUNIZHNJVVZLb2NpU0VDeFJLeHBBQXUzZFdWOXU0V0crdWZYQWtoaXh4R1dyTUpzTnVpOUpjQlVOb3haY2dGWFVOMllFS0gzaGpQWTlTS3ZmM2hMa0dzV2d6TmVGcDM3R3dPN2NrSGE4V3RJeDNTZ3RTeUhrYjNMZWRPQmkwTXNxOWljdkdLWjUwNno4d3JkSmRhYU9ReVZBbXhtU0hZekNNUXVPRnNPUjZhNVkwVklicXN3KzJxRTJMa3dCOXhoUTBXMzR2czcxcmRVcXNDRmRFR2UxWXBwMlFobzUrNHhUVUwrNE5mR216bHhnVC8xRVlyTmdITWRRQnptekJnWnZkVTJFV1dZNUtSVldybG83dUd6WTRsUnVsbTJGUkE9PSIsInZlciI6ImdxOWN4SWhNaXIvL2xqQzZYU2x2MjRkMlU1WUpGOU1Ba1I4anFUc1RPdTFjVjVmUklsVmEzdk5WVzc0ck1JQ01GeU9kZ25UaDd4UjJ5bDRvK0pnSER0N0FjcVNpZzdGdWxhbmVmUXJDc1FaMEpzOWh6WkpTa2xOM3NvOHI1bHV4aHlKV2ROd05yYzJNNDR1MEZ5M0NyY1UvbFhPR05kKzU4NS90bEtJQy9zYUgrY2Z1bE9lRXFiTmJaZ3RycnJOaEl0ck1yQ0oxTGFmMjQ2TU9icVJNanhaVXJaSnl4VGs4a1JEYTgzSEx2QzAxZzhRZG5oYnkwL2dHYzZhWTZ0TkxtQUhuRmlSbnBUaDkybmVUVzF2b0RxSlJrOEhmT0lDMzg2MlVCTHNKOS95Q3VxU1dkTGVNWm10QWVVUmFZeVpPWm5mZUhmLzRmcUFRalR3dEpXWEs0Zz09Iiwic3RmIjoiWS9Ya3BROUh1TWpXMHZEWVZhYWZHaFRsRExBQUtOUUVxZmFZQ1JKWTFwcGh3b0ExSWtzbU50THo3T1VMT0R2MEk2b1JXYkxPWlZqMEtsWmI3OG9EdVJkc0djc3BkT2RpY3BqRmhhUFkvc1gvM2h1QWtua3JjYThuZEVXdnpISEdYVkVmY0hlNU1qTCt0RU5RK0daR2lYZjU0elJTYnUzQ0ZhdzA0d2xzRmYwSDlMdHk2S1laQmxaVGxWSCt2SHhVV1h6NUQrSURqN0JqUll0ZDE4bXBWd1ZEcVU0a284cVY5dGZ1cnBmNUJNZ0M0aVdoaFhyakY5RCtodWpabVJCZ3M2bFViZSswR1ZkYzk5d1p2U1BNM09kNVBoUWZ6eldCTXhXTWFySlRJbFdacTk3VUc2enY4U1k3cmtkQ2ViWFQwaWlFL1RJWTl6SlNBeTNrb1daRDZ3PT0iLCJjaG4iOiJhcGJxODhQYkhWMS82dXNMaFU4R05pYXg3bEFGbTZyQnhIZ25qTkxCbjVaWjYwT1RhZEpIWHpJUDJVczM5Q1NhenBPNGNHb0VUM2ZJZFZKbkJldFhXVVU4UllxNndHRCt3QS9yYW5WVVpkRUg1d2Q3VlNYTFpTb3hQdGRWNUxldkdDYUJkWmoza2hGWVpTUVRxRy9KQ0F1OFRKNHROWWJYQkFqaWZXNm1vYTRqbllzU1c5cnpXOHpQZTdKcFFWRFRza1FnZ2E3MjZnd0JYSDcrbUhyWDB2M0NMWDZKUDFBYjU1VkFzb2tvcUJLVG56dzZ1U0svMU5UQXg0WXJYVnVYWjZ3QUpiMERFU1BuYjFqQ0lOYzlRWkVUVHlFY3ZNTUV3SnpYODFaOEhnN0RLa29jckJRUmdmRGdOa0R3Uktzb0pESjBoTlNtckpvWDdVYysxaEM4VXc9PSIsImlzcyI6IkNvbW1vblRva2VuIiwicHRJZCI6IlJCUFE3MUpKNWFlUU8zaDRzTVpMcUFrbFh1cjJrc0N6U1JiWWRtL1pYT3p2UDBJNFd2NkM3K3ZEQ0Qxb1czM2V0bkJwZ1A0ZDZsRW9WeWIyUmE0OGNKYU5PS0JmN1R3c05LUUhqNjhjTmhpaks1ZnpoMDY1L2hEMllnYTZnTWdPVjkyekRtZEE1dzFoOGdZMTdabWZ4RG1uZFArU2dBVnJBMDgvQnhKdzd2YnNHbGdMOGNNaXFObXh0RVhwOGJoQ3BNb1FoN1I2UVF3cmRtbUo1S2RnZlZjVEFyUWppMzY1RDJER3MwaFR1UUJFZzM3R0pnYVpSeE9iMkxseFc0eHZuTE1ZcVVsQk9ObThub2R5bzFmTjBUbHRtSCs1cHF3ME9yQjMyNW9pMUV1OVNvM0xXZlRvbUFQUEEreU5ENEYzbUZpcXNkNnpSNnphdjduSHR5YSs2QT09Iiwic2lkIjoiRHFwdXc3WjlHekNkNzVaVlFjNVNIbUhuam82eXhzRFJZV1RrR1hSODFTaW1STENabkFpbDlYWWtqRWkwa0VoWjQrb0pHT0hpQmhKcjgrSTRnV3VTRFZuSjgwZ3hEVXNWY1R4TGNscFN6d3MyVDM0TjQvWXhHemdWRjFoRXJwMmFCY0creTRkUTNwR2xwb25qZ1dFeFppc0Noa0RlYzBFemxuU0hJSlpneWMwV3ZOTHVNcmoyZ0lSNGZkV0luSkkycnd6elAzR0ZaSE0zQnZQbWdUN2ZFcnp0UHVDVUxqajFITEtBTXJqZ1RlOWZJYm5qYmhMNmFFbFk3ZmVQNVpGNnhQejI2RDZuY1pvdStmdVNPU05OZkFLUWpQZEFneUsvbldFYjZHbEIyWjdteTRsd080TWxlSDdJdm1sbGlXb3duOCtHUCttbFlFRW4zNFl6c3lrZkZnPT0iLCJlY2wiOiJJMEtsL0w0cU1OOGVkNnZ4UVhoV3V5dFg0eCszZHpPRXJDM1F1dkMrM1Nqa1JqMjNManlEMHpUdHYvdnR0ZncvWWVCYi9KWDMya0w1YjNLcnBIaGFNSktXQklUN2NtYTBhRGpXKzE2Q3BZYlJtejdPazV6V3hXS0ZkOGhpaDlMZUxiNWlGWEVaeUU0S0xxSmovQ1BITTROZVZGclRab3g1Rmh1UGE5SlhHY203WVU4S0dKQk1zdk05RDhqZXJOMXRRWm9XVnpOYUlPOUovV25iZktIakluNkJwdDZTdEN6a3ZlYUlvQittRGg3NVIwb29jU24raHY1Y2pOekJ0UnE0YzJSaU56Q1BoUmVwZVRPSmZmZC9GbUp1R28xV3ZRV2c4K2RiSCsrdk5yVGFoNnJUTUhuZjFNendvWW9PWVl0NExwWGdHck9NR1hLSndMNHh1bnpkUVE9PSIsInZpZCI6IlN6UmsvSHhxN2xXWVRjSkl5Z1lrOGVDaDJtSTBLZGdsZ2pNV0h1OUhPdUNFSHdERTkwd05oKzBLNzhHSlRwakpDaVF4SUFYK0VINEMyVzN2ZHRiYktsY1NCQzU4NmpjaW1VR25NYjBpSUxCcmtUdnR2WWp5TGMwK2dTbW5nRFEwVVN0VlpuNjdRWDloK0swbWw0SjJaTzQ2VXFKR3FhVFk1aVBnbktRMnZIL25MUWV5Rm1qbEdYcjZRRnhIRTRHRWlWM1p5VlpuaHFEUWJFM2dxNTRSZjFiTHBoRkMrbzB4S20zcmpYNk1sSWZLUGRrSlpmaXJ5M1VRY0FpL2h0Z0FhWENMNVJiRWxxcnhvNzNlK2xPdWluTHI3Y1ZGVms2SHE2ZGVRckUwcFg1VlZqcjRIQkVHMGZra0VDb0Q0SDVMbkR1Q29lT0E2MUo1c3JiSEZyL1BnQT09IiwiYXVkIjoiZWZvcm0iLCJjY0lkIjoiSnpQWENZVjFtSnVaUGQrOS82WjNCNG85eitOdTZOQzZQRW1zc0NGZWlsYUE4VjI0VHNFWVVLUE96N1Q5Z1VoUVUzcmZ5T2xSZHZXTXl6MDJVVmtyQWkvc3RSNW9kVEFUcEMyN3pybGVvMUZ6aTI4ZGcrRXF1dmpwV3BTN3RaT2lGZHp1UVBzSnJQMUpxam9CZGNjWUlCNlVId0FxRWpyZUVNcmpsSjI2ekpNTFIxWnhuZ21DQmJsTnR5Vk91TTlsZWlMN0xVMkhxeHdhTC9WWXRzREFxTGVWY1NQcDZaR2l4UnQ4TnZpMlhzWnhHalc2eGJXUDJScWIrYXZvUk1rbzdONWh2YTUrcTZrem94MDk2ZFh5YU00Q0ZsbVdWWWJKRGp6akZoY2dsZXhtcCthUDJKS0REcFpzMDk4cFJEWDJiRkJPVVphNHpoYmJGU1NGdG1NNjR3PT0iLCJlY3IiOiJXTnRiS201SlBGMmVUdTZ3MTArZDlkQjFIRDBHd0pEcEYxeDhWVXJEb0laSTgya2o1QU45NUQxZEFPSlVpZVdrMERIYjI5eDd6eEFtT3NmVzJ0bUNjNjMrZnp5cnUyWFBDSnN0Nkt6Y0pZZEFMc201YnUwQW1sOHU1b1pKTzIzK0JRQUl4ditVRXZVcHBPOU5nQUowUWkyTUFKOVRHL0JhcEVzZ3VsdHZJQTVDTm5XT25EQWc4VWpYajNvZmpndm5FeU0ydE9lZVdTSHFLblVOdDlVRWs3SWNFcjh2L21VNDBqSDgzZTFOZGlKbks2Wm1lcFZ0UlVZdVVqNm9JR0VMRVdWQlhTVHlKZEhnRXdOVTVUVk1PVjN6TEVEZUFUa1JqMWVSQWViT2lsV3ZDNWNMKzFUSGVDSzA4Z1JjZUE1N3dDbGxNcWlmbDdoaXdTbHMrWVpaTnc9PSIsInBhcnR5SWQiOiJLZktaTHNnQi9vZFp2a2o4cWsyT1BsYjFxM1E4dVRhN3lvbEVWNGF6SWFHbTZsOU1MSXZzeC9OZEduNzlJOG9pWWpoM3dPUDdGRXo2aHE2SUpFUlYxZStmY0pORzQrcnUrb29oVFQwd3VCNVl6dTNtTEZ5QWdCRlI1MFFnMjVXNTM3dVJaeVBxYlMva0p6UUVqOGhWSUdwWXFueUlwVDBhbFk0U0JDTjJERmhaN2tDbmp3NUNOMk8xY0pyTFdLZGtEU2dnUmhLOGxZRC9ydDBHYnB1Qi9KaitwTzIyamwwNU50Z1FQVitTeTI5Y3MwZFJZbzNkbGExdUdXakFkRFk2SWhqUk5OZEVoL1YzZCsxS3NZRzJ1N05IeDh2RmhjMkJ2SHBHRXoxT3JDeGZtSGhMN2NLbGluZ05yZHBZQVQzR0s0MDdzRHV4czNRWENvTnNEampQN3c9PSIsImV4cCI6MTY1MjEzMzE2OCwiYWlkIjoiRVFPQnY2US9sSEgvSkpadFc0SzNoblRNRjZzaFZveW9zNjQwNUhzc0MvaHloajU2U28vQlZERW9SZDRHcWs4NHBpVnVGZUpvektVSEtQSklQYU02RDRMNEVnM0h5VklBMHF5SUMwYVNhMzFYNTlLTnFBQmlMTlBybVFJUEt6V0VCencrbWRxakJITHJQd0dQNFZTR2ZTUmphRVhsVktNY3NENzRNaGFaYmR5cWh2NUlISGkyT2NPZFMyWUVtdlNiWEtkOU5qM0VUK3VCNm9OSXJrKzUwWUw1NFBUbnd0cHNMQllEMjRLNi92VVdkd0FnWGVpMThpd1pwUlVpUmc1ejBNT2lFZjk3RjA4RWNSdGhSTUVBbmhGMmZxYUNyK0RwSHpMbGJvMTZWOHBGQTlGeStueUw4WFh4UzZIRlFPQTJXVWZ6WDgvcldsK3k1Mm84c2NTT1RBPT0iLCJpYXQiOjE2NDk5ODU2ODUsImF0ciI6IkVZK2JDNzlEUGVMaVFrWVNHa1VpQWFSRWdIdnQxSDlTS01ZQ05VcWZpWXo2ZUFOZEt6OTMrRXIyOTMyMnl2bVo5UGQzbGxpclE2WXZpL3VkSER5OXBseWxlRXRqTnF4c0FSc3BJc1BUMWJodWJTNjNuS3RIU0hhSzFPdHlQRHF4R1MxTzEwVWV4RmVwR1M5SG90aGhjQnQ0R1N3N0FpQmZJc1AxeFIxR0ZwR0ZUdGd6aUFlNjhkV2szaVJTWm9NdHJlSEdxTWJNT0oyZWVNRE1RWmZNU1BWYXhlaVRRQ3JhenZnaVhEQnU1K3psUmNVUllFQXZsMXVCbk4wM1NNTUhHQlM2NFA0M2dpSkM2R2tnSmhMSGZPSXk2QXg1Y1J3THloL253WVc3UnFpZVRZVVRUQ29WV0ZPNVRzbWVkOHRBUUZQdHgxOEk5MDFyVFFlbnErSWUyQT09In0.DEwCZDrg57n4oqiCaqYrkpLXq7pddKC9OsT18tS2jscmeNpvvBLjpER_RiKRbQYIbRJNvuefieH_f_KiKNW5iYiF-zI44BmDfle1eNrfifEoNPtnFS2CgeyUcbvgpB1OuUugHN_y5L1tsCRoGbb6gCNJpOIMBB-7z8p8HKdWfGn4_zjYSNTMfl4o2-fzCcgXafeo2ycsMXInvdxj2NHYufrtCG9tkyP_Lw3GqNfb5gStCF32dwjiKqJG5YxLg_y9ln9x18V38KOxQAHS1k63uWjmzOrrfv1E-7nGnINAqyUcKYRtV3ZrhtQKMyjY8Hj-ta9V7xMJ4qvQ9jwYbpzlZA",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/{header:x-aiahk-policy-id}/financial-value",
+							"request": {
+								"url": "{{xapi_host}}/policies/{{policyId}}/financial-value",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"reinstatePayMode\":\"1\",\r\n    \"reinstateDate\":\"1\",\r\n    \"quoteMode\":\"1\"  \r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "papi~service",
+			"description": "",
+			"item": [
+				{
+					"name": "common",
+					"description": "",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"url": "",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint1",
+					"description": "",
+					"item": [
+						{
+							"name": "uiPendingItems",
+							"request": {
+								"url": "{{papi_host}}/agents/policies/uiPendingItems",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"orderBy\": 0,\r\n    \"period\": 0,\r\n    \"selectedAgent\": \"string\"\r\n  },\r\n  \"message\": \"string\",\r\n  \"reason\": \"string\",\r\n  \"reasonCode\": \"string\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint2",
+					"description": "",
+					"item": [
+						{
+							"name": "getPACoverageInfo",
+							"request": {
+								"url": "{{sapi_host}}/PA-policies/1/getCoverageInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPLCoverageInfo",
+							"request": {
+								"url": "{{sapi_host}}/PL-policies/1/getCoverageInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getLifeCoverageInfo",
+							"request": {
+								"url": "{{papi_host}}/life-policies/{{policyId}}/get-general-info",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPAGeneralInfo",
+							"request": {
+								"url": "{{sapi_host}}/PA-policies/1/getGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPLGeneralInfo",
+							"request": {
+								"url": "{{sapi_host}}/PL-policies/1/getGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint3",
+					"description": "",
+					"item": [
+						{
+							"name": "getOtherPolicies",
+							"request": {
+								"url": {
+									"raw": "{{papi_host}}/agents/1/policies/PT1001/other-policies?",
+									"host": [
+										"{{papi_host}}"
+									],
+									"path": [
+										"agents",
+										"1",
+										"policies",
+										"PT1001",
+										"other-policies"
+									],
+									"query": [
+										{
+											"key": "agentId",
+											"value": "\"123\"",
+											"disabled": true
+										},
+										{
+											"key": "policyId",
+											"value": "\"PT1001\"",
+											"disabled": true
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "vitalities",
+							"request": {
+								"url": {
+									"raw": "{{papi_host}}/agents/111/vitalities?memberName=12&membershipDueDate=1&membershipNumber=2&membershipStatus=1&policyId=BT111&selectedAgentId=11",
+									"host": [
+										"{{papi_host}}"
+									],
+									"path": [
+										"agents",
+										"111",
+										"vitalities"
+									],
+									"query": [
+										{
+											"key": "memberName",
+											"value": "12"
+										},
+										{
+											"key": "membershipDueDate",
+											"value": "1"
+										},
+										{
+											"key": "membershipNumber",
+											"value": "2"
+										},
+										{
+											"key": "membershipStatus",
+											"value": "1"
+										},
+										{
+											"key": "policyId",
+											"value": "BT111"
+										},
+										{
+											"key": "selectedAgentId",
+											"value": "11"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "vitality",
+							"request": {
+								"url": {
+									"raw": "{{papi_host}}/vitalities/123?",
+									"host": [
+										"{{papi_host}}"
+									],
+									"path": [
+										"vitalities",
+										"123"
+									],
+									"query": [
+										{
+											"key": "memberName",
+											"value": "12",
+											"disabled": true
+										},
+										{
+											"key": "membershipDueDate",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "membershipNumber",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "membershipStatus",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "policyId",
+											"value": "BT111",
+											"disabled": true
+										},
+										{
+											"key": "selectedAgentId",
+											"value": "11",
+											"disabled": true
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/policies/policyId/claims",
+							"request": {
+								"url": "{{papi_host}}/policies/E1/claims",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "payment-info",
+							"request": {
+								"url": "{{sapi_host}}/aia-pes/policies/1/payment-info",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "summarypos",
+							"request": {
+								"url": "{{sapi_host}}/aia-pes/policies/1/pos",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "sapi~persistence",
+			"description": "",
+			"item": [
+				{
+					"name": "common",
+					"description": "",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"url": "{{sapi_host}}/index",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint1",
+					"description": "",
+					"item": [
+						{
+							"name": "PolicyCheck",
+							"description": "",
+							"item": [
+								{
+									"name": "isValid1",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/isValid1",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "isValid2",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/isValid2",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "checkSuppressedPolicy",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/checkSuppressedPolicy",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "getNewBusinessInfo1",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/getNewBusinessInfo1",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "getNewBusinessInfo2",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/getNewBusinessInfo2",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "checkAccessControl",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/checkAccessControl",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "isIfaAuthorizedAccess",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/isIfaAuthorizedAccess",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "isAssigneeAuthorizedAccess",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/isAssigneeAuthorizedAccess",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "getIfaPolicyList",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/getIfaPolicyList",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "getSystemCfg",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/getSystemCfg",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "getCase360URL",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/getCase360URL",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "plIsValid",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/plIsValid",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "chkPolAgtRight",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/chkPolAgtRight",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "paIsValid",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/paIsValid",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "paChkPolAgtRight",
+									"request": {
+										"url": "{{sapi_host}}/life-policy/paChkPolAgtRight",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"accessId\": \"string\",\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"val\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Policy",
+							"description": "",
+							"item": [
+								{
+									"name": "getAllUIPending",
+									"request": {
+										"url": "{{sapi_host}}/policy/getAllUIPending",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"lang\": \"string\",\r\n  \"leader\": \"string\",\r\n  \"name\": \"string\",\r\n  \"orderBy\": \"string\",\r\n  \"period\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"policyType\": \"string\",\r\n  \"selAgt\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Agent",
+							"description": "",
+							"item": [
+								{
+									"name": "chkLeaderAgtRight",
+									"request": {
+										"url": "{{sapi_host}}/agent/chkLeaderAgtRight",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"agyCode\": \"string\",\r\n  \"lang\": \"string\",\r\n  \"leader\": \"string\",\r\n  \"name\": \"string\",\r\n  \"orderBy\": \"string\",\r\n  \"period\": \"string\",\r\n  \"policyNumber\": \"string\",\r\n  \"policyType\": \"string\",\r\n  \"selAgt\": \"string\"\r\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint2",
+					"description": "",
+					"item": [
+						{
+							"name": "getPaGeneralInfo",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPaGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlGeneralInfo",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getLifeGeneralInfo",
+							"request": {
+								"url": "{{sapi_host}}/policy/getLifeGeneralInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"{{token}}\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPaCoverageDetails",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPaCoverageDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPaDependentCoverage",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPaDependentCoverage",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPaRbInd",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPaRbInd",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPaPositiveOption",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPaPositiveOption",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlFamilyMemberInfo",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlFamilyMemberInfo",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlCoverageDetails",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlCoverageDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlScheduledItems1",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlScheduledItems1",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlDomesticDetails",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlDomesticDetails",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPlRiskDetail",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPlRiskDetail",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyId\": \"123\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sprint3",
+					"description": "",
+					"item": [
+						{
+							"name": "get-all-major-claims-request",
+							"request": {
+								"url": "{{sapi_host}}/policies/B1/claims/get-all-major-claims-request",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-claims-request",
+							"request": {
+								"url": "{{sapi_host}}/policies/E1/claims/get-all-claims-request",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPAPolList",
+							"request": {
+								"url": "{{sapi_host}}/policy/getPAPolList",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getLifePolSumList",
+							"request": {
+								"url": "{{sapi_host}}/policy/getLifePolSumList",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPayInfo",
+							"request": {
+								"url": "{{sapi_host}}/getPayInfo/1",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getVitalityDetails",
+							"request": {
+								"url": "{{sapi_host}}/getVitalityDetails/1",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getPosList",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getPosList",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\",\r\n    \"agentCode\":\"2\",\r\n    \"languageType\":\"3\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getIChangeList",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getIChangeList",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\",\r\n    \"agentCode\":\"2\",\r\n    \"languageType\":\"3\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getLastestPaymentInfo",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getLastestPaymentInfo",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\",\r\n    \"agentCode\":\"2\",\r\n    \"languageType\":\"3\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getAutopayInfo",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getAutopayInfo",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\",\r\n    \"agentCode\":\"2\",\r\n    \"languageType\":\"3\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getOutstandLevyIA",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getOutstandLevyIA",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getFPSaccInfo",
+							"request": {
+								"url": "{{papi_host}}/aia-pes/policy/getFPSaccInfo",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"policyNumber\":\"B1\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "getVitalityList",
+							"request": {
+								"url": "{{sapi_host}}/getVitalityList",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"memberName\": \"string\",\r\n  \"membershipDueDate\": \"string\",\r\n  \"membershipNo\": \"string\",\r\n  \"membershipStatus\": \"string\",\r\n  \"policyNo\": \"string\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
