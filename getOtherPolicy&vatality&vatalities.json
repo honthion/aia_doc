@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "124f25c3-132e-4a45-a308-6ba57a7ceeb8",
+		"name": "aia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bff",
+			"item": [
+				{
+					"name": "getOtherPolicies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/agents/1/policies/PT1001/other-policies",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"agents",
+								"1",
+								"policies",
+								"PT1001",
+								"other-policies"
+							],
+							"query": [
+								{
+									"key": "agentId",
+									"value": "\"123\"",
+									"disabled": true
+								},
+								{
+									"key": "policyId",
+									"value": "\"PT1001\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vitalities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/agents/111/vitalities?memberName=12&membershipDueDate=1&membershipNumber=2&membershipStatus=1&policyId=BT111&selectedAgentId=11",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"agents",
+								"111",
+								"vitalities"
+							],
+							"query": [
+								{
+									"key": "memberName",
+									"value": "12"
+								},
+								{
+									"key": "membershipDueDate",
+									"value": "1"
+								},
+								{
+									"key": "membershipNumber",
+									"value": "2"
+								},
+								{
+									"key": "membershipStatus",
+									"value": "1"
+								},
+								{
+									"key": "policyId",
+									"value": "BT111"
+								},
+								{
+									"key": "selectedAgentId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vitality",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/vitalities/123",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"vitalities",
+								"123"
+							],
+							"query": [
+								{
+									"key": "memberName",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "membershipDueDate",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "membershipNumber",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "membershipStatus",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "policyId",
+									"value": "BT111",
+									"disabled": true
+								},
+								{
+									"key": "selectedAgentId",
+									"value": "11",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "getOtherPolicies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{papi_host}}/agents/1/policies/PT1001/other-policies",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"agents",
+								"1",
+								"policies",
+								"PT1001",
+								"other-policies"
+							],
+							"query": [
+								{
+									"key": "agentId",
+									"value": "\"123\"",
+									"disabled": true
+								},
+								{
+									"key": "policyId",
+									"value": "\"PT1001\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vitalities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{papi_host}}/agents/111/vitalities?memberName=12&membershipDueDate=1&membershipNumber=2&membershipStatus=1&policyId=BT111&selectedAgentId=11",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"agents",
+								"111",
+								"vitalities"
+							],
+							"query": [
+								{
+									"key": "memberName",
+									"value": "12"
+								},
+								{
+									"key": "membershipDueDate",
+									"value": "1"
+								},
+								{
+									"key": "membershipNumber",
+									"value": "2"
+								},
+								{
+									"key": "membershipStatus",
+									"value": "1"
+								},
+								{
+									"key": "policyId",
+									"value": "BT111"
+								},
+								{
+									"key": "selectedAgentId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vitality",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{papi_host}}/vitalities/123",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"vitalities",
+								"123"
+							],
+							"query": [
+								{
+									"key": "memberName",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "membershipDueDate",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "membershipNumber",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "membershipStatus",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "policyId",
+									"value": "BT111",
+									"disabled": true
+								},
+								{
+									"key": "selectedAgentId",
+									"value": "11",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Per",
+			"item": [
+				{
+					"name": "getPAPolList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sapi_host}}/policy/getPAPolList",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"policy",
+								"getPAPolList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLifePolSumList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sapi_host}}/policy/getLifePolSumList",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"policy",
+								"getLifePolSumList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPayInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sapi_host}}/getPayInfo/1",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"getPayInfo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVitalityDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agentId\": \"1\",\r\n    \"policyId\": \"1\",\r\n    \"policyType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sapi_host}}/getVitalityDetails/1",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"getVitalityDetails",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVitalityList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"memberName\": \"string\",\r\n  \"membershipDueDate\": \"string\",\r\n  \"membershipNo\": \"string\",\r\n  \"membershipStatus\": \"string\",\r\n  \"policyNo\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sapi_host}}/getVitalityList",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"getVitalityList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

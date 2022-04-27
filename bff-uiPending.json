@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "124f25c3-132e-4a45-a308-6ba57a7ceeb8",
+		"name": "aia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bff-UI",
+			"item": [
+				{
+					"name": "uiPendingItems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agtCode\": \"string\",\r\n  \"orderBy\": 0,\r\n  \"period\": 0,\r\n  \"policyNumber\": \"string\",\r\n  \"selectedAgent\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{xapi_host}}/agents/policies/uiPendingItems",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"agents",
+								"policies",
+								"uiPendingItems"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

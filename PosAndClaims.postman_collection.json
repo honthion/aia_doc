@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "35af28fc-2188-418e-8890-35107b52b3f5",
+		"name": "PES Policy",
+		"description": "Sprint2 Interface Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "service",
+			"item": [
+				{
+					"name": "getPACoverageInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{sapi_host}}/aia-pes/PA-policies/1/getCoverageInfo",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PA-policies",
+								"1",
+								"getCoverageInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPLCoverageInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{sapi_host}}/aia-pes/PL-policies/1/getCoverageInfo",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PL-policies",
+								"1",
+								"getCoverageInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPAGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{sapi_host}}/aia-pes/PA-policies/1/getGeneralInfo",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PA-policies",
+								"1",
+								"getGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPLGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{sapi_host}}/aia-pes/PL-policies/1/getGeneralInfo",
+							"host": [
+								"{{sapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PL-policies",
+								"1",
+								"getGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "persistence",
+			"item": [
+				{
+					"name": "getPaGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPaGeneralInfo",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPaGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlGeneralInfo",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaCoverageDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPaCoverageDetails",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPaCoverageDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaDependentCoverage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPaDependentCoverage",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPaDependentCoverage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaRbInd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPaRbInd",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPaRbInd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaPositiveOption",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPaPositiveOption",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPaPositiveOption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlFamilyMemberInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlFamilyMemberInfo",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlFamilyMemberInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlCoverageDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlCoverageDetails",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlCoverageDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlScheduledItems1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlScheduledItems1",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlScheduledItems1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlDomesticDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlDomesticDetails",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlDomesticDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlRiskDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyId\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{papi_host}}/aia-pes/policy/getPlRiskDetail",
+							"host": [
+								"{{papi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"policy",
+								"getPlRiskDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bff",
+			"item": [
+				{
+					"name": "getPLCoverageInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/aia-pes/PL-policies/1/getCoverageInfo",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PL-policies",
+								"1",
+								"getCoverageInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPACoverageInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/aia-pes/PA-policies/1/getCoverageInfo",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PA-policies",
+								"1",
+								"getCoverageInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPLGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/aia-pes/PA-policies/1/getGeneralInfo",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PA-policies",
+								"1",
+								"getGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPAGeneralInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{xapi_host}}/aia-pes/PL-policies/1/getGeneralInfo",
+							"host": [
+								"{{xapi_host}}"
+							],
+							"path": [
+								"aia-pes",
+								"PL-policies",
+								"1",
+								"getGeneralInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosPending",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzc29JZCI6IkVkUmZyTkhybWR0eS9BV292N3dMWmdLTE1TOWxQSjZyQStwOGl0eCtjT1RoOXk2SFpZVldpblU5c2VRdi9Pb0dyVXN4dVphQXNGNHcxQXNVU09ZaXZGRWJxWmNjRms4TFhOTlBTQzJSd3plbjRBOGU0RCtMNUxKd2hweWtnbUJQa3cvei9MWUhONVA0RFU0aHkwRWFoVk81akJtbmN0aUZnSnhoenI5RWxDQlZaUzJiZE5wbVhobm14NFplcDdqVU82bFhob0UzSEs5OVBjd1JBVWpINTNhN1lNSzh4Y1F0OWFVSmd4VnJWUEVIa3FhQTJIRFZ3a1lhaENobmRmb0NPMzFNVENvUUl4dUtCbUYrN2V4MThUWCtrN2lMNzRqVXhmQzRWSEczT1JhQlVhbzF6M2Y4Vzh3bi8wR2Z5ZERhYUNKaG4vWWRqRnBsbE9IUWFIckpuQT09IiwiZXBsIjoiRHpzZllYMTdvT0ZOVFFXSnVBZHZMVHpUWlBQcWxhU21nbFVtUFRtam5jMFd5aVRrOFhvT2ZiemErMEpRK0duL3VPZ0R3T1ltWkFqN0twZkZSUHVJbWJKQk1kQlJpc0RzbUxtYWdsc2FxNkRGcTJIWDV6QlVqZ2ErdlJJNG1aVThwc0JOaXY5SG9QK3hVUjA5WG9HaFVzc2dpWTRVOTVkSEwyWExua0lHMTNrQ3I2eUtpTUFLQmlrOTZzOGhraGM5TUNuTjNvaE9NTU9KWFJUd2NkM1pFbmtvbGNvL3Jqc1REeTJYOXhjYXVBTUJHRDI5ci9jU2UxRHVFajI1d1NDU2g0LzFUTFhIMm5rTVVuTFZOMldDOGFxV252QjdqTkZBVFBMTVNTRnZDZXJnSDFIakloclBFK2V4YlRtSmVsNVE0bkQvYkk5M0tsYzBXMlJZc0ZJbkFRPT0iLCJlaWQiOiJUbmtuTFRPMEc2ZVN1Nm9hOGQvVnBoeHhaazI1UDFtNGhSc0tzZ3JTV21uWDdYaFpHWTJKbEthNUNIZHNJVVZLb2NpU0VDeFJLeHBBQXUzZFdWOXU0V0crdWZYQWtoaXh4R1dyTUpzTnVpOUpjQlVOb3haY2dGWFVOMllFS0gzaGpQWTlTS3ZmM2hMa0dzV2d6TmVGcDM3R3dPN2NrSGE4V3RJeDNTZ3RTeUhrYjNMZWRPQmkwTXNxOWljdkdLWjUwNno4d3JkSmRhYU9ReVZBbXhtU0hZekNNUXVPRnNPUjZhNVkwVklicXN3KzJxRTJMa3dCOXhoUTBXMzR2czcxcmRVcXNDRmRFR2UxWXBwMlFobzUrNHhUVUwrNE5mR216bHhnVC8xRVlyTmdITWRRQnptekJnWnZkVTJFV1dZNUtSVldybG83dUd6WTRsUnVsbTJGUkE9PSIsInZlciI6ImdxOWN4SWhNaXIvL2xqQzZYU2x2MjRkMlU1WUpGOU1Ba1I4anFUc1RPdTFjVjVmUklsVmEzdk5WVzc0ck1JQ01GeU9kZ25UaDd4UjJ5bDRvK0pnSER0N0FjcVNpZzdGdWxhbmVmUXJDc1FaMEpzOWh6WkpTa2xOM3NvOHI1bHV4aHlKV2ROd05yYzJNNDR1MEZ5M0NyY1UvbFhPR05kKzU4NS90bEtJQy9zYUgrY2Z1bE9lRXFiTmJaZ3RycnJOaEl0ck1yQ0oxTGFmMjQ2TU9icVJNanhaVXJaSnl4VGs4a1JEYTgzSEx2QzAxZzhRZG5oYnkwL2dHYzZhWTZ0TkxtQUhuRmlSbnBUaDkybmVUVzF2b0RxSlJrOEhmT0lDMzg2MlVCTHNKOS95Q3VxU1dkTGVNWm10QWVVUmFZeVpPWm5mZUhmLzRmcUFRalR3dEpXWEs0Zz09Iiwic3RmIjoiWS9Ya3BROUh1TWpXMHZEWVZhYWZHaFRsRExBQUtOUUVxZmFZQ1JKWTFwcGh3b0ExSWtzbU50THo3T1VMT0R2MEk2b1JXYkxPWlZqMEtsWmI3OG9EdVJkc0djc3BkT2RpY3BqRmhhUFkvc1gvM2h1QWtua3JjYThuZEVXdnpISEdYVkVmY0hlNU1qTCt0RU5RK0daR2lYZjU0elJTYnUzQ0ZhdzA0d2xzRmYwSDlMdHk2S1laQmxaVGxWSCt2SHhVV1h6NUQrSURqN0JqUll0ZDE4bXBWd1ZEcVU0a284cVY5dGZ1cnBmNUJNZ0M0aVdoaFhyakY5RCtodWpabVJCZ3M2bFViZSswR1ZkYzk5d1p2U1BNM09kNVBoUWZ6eldCTXhXTWFySlRJbFdacTk3VUc2enY4U1k3cmtkQ2ViWFQwaWlFL1RJWTl6SlNBeTNrb1daRDZ3PT0iLCJjaG4iOiJhcGJxODhQYkhWMS82dXNMaFU4R05pYXg3bEFGbTZyQnhIZ25qTkxCbjVaWjYwT1RhZEpIWHpJUDJVczM5Q1NhenBPNGNHb0VUM2ZJZFZKbkJldFhXVVU4UllxNndHRCt3QS9yYW5WVVpkRUg1d2Q3VlNYTFpTb3hQdGRWNUxldkdDYUJkWmoza2hGWVpTUVRxRy9KQ0F1OFRKNHROWWJYQkFqaWZXNm1vYTRqbllzU1c5cnpXOHpQZTdKcFFWRFRza1FnZ2E3MjZnd0JYSDcrbUhyWDB2M0NMWDZKUDFBYjU1VkFzb2tvcUJLVG56dzZ1U0svMU5UQXg0WXJYVnVYWjZ3QUpiMERFU1BuYjFqQ0lOYzlRWkVUVHlFY3ZNTUV3SnpYODFaOEhnN0RLa29jckJRUmdmRGdOa0R3Uktzb0pESjBoTlNtckpvWDdVYysxaEM4VXc9PSIsImlzcyI6IkNvbW1vblRva2VuIiwicHRJZCI6IlJCUFE3MUpKNWFlUU8zaDRzTVpMcUFrbFh1cjJrc0N6U1JiWWRtL1pYT3p2UDBJNFd2NkM3K3ZEQ0Qxb1czM2V0bkJwZ1A0ZDZsRW9WeWIyUmE0OGNKYU5PS0JmN1R3c05LUUhqNjhjTmhpaks1ZnpoMDY1L2hEMllnYTZnTWdPVjkyekRtZEE1dzFoOGdZMTdabWZ4RG1uZFArU2dBVnJBMDgvQnhKdzd2YnNHbGdMOGNNaXFObXh0RVhwOGJoQ3BNb1FoN1I2UVF3cmRtbUo1S2RnZlZjVEFyUWppMzY1RDJER3MwaFR1UUJFZzM3R0pnYVpSeE9iMkxseFc0eHZuTE1ZcVVsQk9ObThub2R5bzFmTjBUbHRtSCs1cHF3ME9yQjMyNW9pMUV1OVNvM0xXZlRvbUFQUEEreU5ENEYzbUZpcXNkNnpSNnphdjduSHR5YSs2QT09Iiwic2lkIjoiRHFwdXc3WjlHekNkNzVaVlFjNVNIbUhuam82eXhzRFJZV1RrR1hSODFTaW1STENabkFpbDlYWWtqRWkwa0VoWjQrb0pHT0hpQmhKcjgrSTRnV3VTRFZuSjgwZ3hEVXNWY1R4TGNscFN6d3MyVDM0TjQvWXhHemdWRjFoRXJwMmFCY0creTRkUTNwR2xwb25qZ1dFeFppc0Noa0RlYzBFemxuU0hJSlpneWMwV3ZOTHVNcmoyZ0lSNGZkV0luSkkycnd6elAzR0ZaSE0zQnZQbWdUN2ZFcnp0UHVDVUxqajFITEtBTXJqZ1RlOWZJYm5qYmhMNmFFbFk3ZmVQNVpGNnhQejI2RDZuY1pvdStmdVNPU05OZkFLUWpQZEFneUsvbldFYjZHbEIyWjdteTRsd080TWxlSDdJdm1sbGlXb3duOCtHUCttbFlFRW4zNFl6c3lrZkZnPT0iLCJlY2wiOiJJMEtsL0w0cU1OOGVkNnZ4UVhoV3V5dFg0eCszZHpPRXJDM1F1dkMrM1Nqa1JqMjNManlEMHpUdHYvdnR0ZncvWWVCYi9KWDMya0w1YjNLcnBIaGFNSktXQklUN2NtYTBhRGpXKzE2Q3BZYlJtejdPazV6V3hXS0ZkOGhpaDlMZUxiNWlGWEVaeUU0S0xxSmovQ1BITTROZVZGclRab3g1Rmh1UGE5SlhHY203WVU4S0dKQk1zdk05RDhqZXJOMXRRWm9XVnpOYUlPOUovV25iZktIakluNkJwdDZTdEN6a3ZlYUlvQittRGg3NVIwb29jU24raHY1Y2pOekJ0UnE0YzJSaU56Q1BoUmVwZVRPSmZmZC9GbUp1R28xV3ZRV2c4K2RiSCsrdk5yVGFoNnJUTUhuZjFNendvWW9PWVl0NExwWGdHck9NR1hLSndMNHh1bnpkUVE9PSIsInZpZCI6IlN6UmsvSHhxN2xXWVRjSkl5Z1lrOGVDaDJtSTBLZGdsZ2pNV0h1OUhPdUNFSHdERTkwd05oKzBLNzhHSlRwakpDaVF4SUFYK0VINEMyVzN2ZHRiYktsY1NCQzU4NmpjaW1VR25NYjBpSUxCcmtUdnR2WWp5TGMwK2dTbW5nRFEwVVN0VlpuNjdRWDloK0swbWw0SjJaTzQ2VXFKR3FhVFk1aVBnbktRMnZIL25MUWV5Rm1qbEdYcjZRRnhIRTRHRWlWM1p5VlpuaHFEUWJFM2dxNTRSZjFiTHBoRkMrbzB4S20zcmpYNk1sSWZLUGRrSlpmaXJ5M1VRY0FpL2h0Z0FhWENMNVJiRWxxcnhvNzNlK2xPdWluTHI3Y1ZGVms2SHE2ZGVRckUwcFg1VlZqcjRIQkVHMGZra0VDb0Q0SDVMbkR1Q29lT0E2MUo1c3JiSEZyL1BnQT09IiwiYXVkIjoiZWZvcm0iLCJjY0lkIjoiSnpQWENZVjFtSnVaUGQrOS82WjNCNG85eitOdTZOQzZQRW1zc0NGZWlsYUE4VjI0VHNFWVVLUE96N1Q5Z1VoUVUzcmZ5T2xSZHZXTXl6MDJVVmtyQWkvc3RSNW9kVEFUcEMyN3pybGVvMUZ6aTI4ZGcrRXF1dmpwV3BTN3RaT2lGZHp1UVBzSnJQMUpxam9CZGNjWUlCNlVId0FxRWpyZUVNcmpsSjI2ekpNTFIxWnhuZ21DQmJsTnR5Vk91TTlsZWlMN0xVMkhxeHdhTC9WWXRzREFxTGVWY1NQcDZaR2l4UnQ4TnZpMlhzWnhHalc2eGJXUDJScWIrYXZvUk1rbzdONWh2YTUrcTZrem94MDk2ZFh5YU00Q0ZsbVdWWWJKRGp6akZoY2dsZXhtcCthUDJKS0REcFpzMDk4cFJEWDJiRkJPVVphNHpoYmJGU1NGdG1NNjR3PT0iLCJlY3IiOiJXTnRiS201SlBGMmVUdTZ3MTArZDlkQjFIRDBHd0pEcEYxeDhWVXJEb0laSTgya2o1QU45NUQxZEFPSlVpZVdrMERIYjI5eDd6eEFtT3NmVzJ0bUNjNjMrZnp5cnUyWFBDSnN0Nkt6Y0pZZEFMc201YnUwQW1sOHU1b1pKTzIzK0JRQUl4ditVRXZVcHBPOU5nQUowUWkyTUFKOVRHL0JhcEVzZ3VsdHZJQTVDTm5XT25EQWc4VWpYajNvZmpndm5FeU0ydE9lZVdTSHFLblVOdDlVRWs3SWNFcjh2L21VNDBqSDgzZTFOZGlKbks2Wm1lcFZ0UlVZdVVqNm9JR0VMRVdWQlhTVHlKZEhnRXdOVTVUVk1PVjN6TEVEZUFUa1JqMWVSQWViT2lsV3ZDNWNMKzFUSGVDSzA4Z1JjZUE1N3dDbGxNcWlmbDdoaXdTbHMrWVpaTnc9PSIsInBhcnR5SWQiOiJLZktaTHNnQi9vZFp2a2o4cWsyT1BsYjFxM1E4dVRhN3lvbEVWNGF6SWFHbTZsOU1MSXZzeC9OZEduNzlJOG9pWWpoM3dPUDdGRXo2aHE2SUpFUlYxZStmY0pORzQrcnUrb29oVFQwd3VCNVl6dTNtTEZ5QWdCRlI1MFFnMjVXNTM3dVJaeVBxYlMva0p6UUVqOGhWSUdwWXFueUlwVDBhbFk0U0JDTjJERmhaN2tDbmp3NUNOMk8xY0pyTFdLZGtEU2dnUmhLOGxZRC9ydDBHYnB1Qi9KaitwTzIyamwwNU50Z1FQVitTeTI5Y3MwZFJZbzNkbGExdUdXakFkRFk2SWhqUk5OZEVoL1YzZCsxS3NZRzJ1N05IeDh2RmhjMkJ2SHBHRXoxT3JDeGZtSGhMN2NLbGluZ05yZHBZQVQzR0s0MDdzRHV4czNRWENvTnNEampQN3c9PSIsImV4cCI6MTY1MjEzMzE2OCwiYWlkIjoiRVFPQnY2US9sSEgvSkpadFc0SzNoblRNRjZzaFZveW9zNjQwNUhzc0MvaHloajU2U28vQlZERW9SZDRHcWs4NHBpVnVGZUpvektVSEtQSklQYU02RDRMNEVnM0h5VklBMHF5SUMwYVNhMzFYNTlLTnFBQmlMTlBybVFJUEt6V0VCencrbWRxakJITHJQd0dQNFZTR2ZTUmphRVhsVktNY3NENzRNaGFaYmR5cWh2NUlISGkyT2NPZFMyWUVtdlNiWEtkOU5qM0VUK3VCNm9OSXJrKzUwWUw1NFBUbnd0cHNMQllEMjRLNi92VVdkd0FnWGVpMThpd1pwUlVpUmc1ejBNT2lFZjk3RjA4RWNSdGhSTUVBbmhGMmZxYUNyK0RwSHpMbGJvMTZWOHBGQTlGeStueUw4WFh4UzZIRlFPQTJXVWZ6WDgvcldsK3k1Mm84c2NTT1RBPT0iLCJpYXQiOjE2NDk5ODU2ODUsImF0ciI6IkVZK2JDNzlEUGVMaVFrWVNHa1VpQWFSRWdIdnQxSDlTS01ZQ05VcWZpWXo2ZUFOZEt6OTMrRXIyOTMyMnl2bVo5UGQzbGxpclE2WXZpL3VkSER5OXBseWxlRXRqTnF4c0FSc3BJc1BUMWJodWJTNjNuS3RIU0hhSzFPdHlQRHF4R1MxTzEwVWV4RmVwR1M5SG90aGhjQnQ0R1N3N0FpQmZJc1AxeFIxR0ZwR0ZUdGd6aUFlNjhkV2szaVJTWm9NdHJlSEdxTWJNT0oyZWVNRE1RWmZNU1BWYXhlaVRRQ3JhenZnaVhEQnU1K3psUmNVUllFQXZsMXVCbk4wM1NNTUhHQlM2NFA0M2dpSkM2R2tnSmhMSGZPSXk2QXg1Y1J3THloL253WVc3UnFpZVRZVVRUQ29WV0ZPNVRzbWVkOHRBUUZQdHgxOEk5MDFyVFFlbnErSWUyQT09In0.DEwCZDrg57n4oqiCaqYrkpLXq7pddKC9OsT18tS2jscmeNpvvBLjpER_RiKRbQYIbRJNvuefieH_f_KiKNW5iYiF-zI44BmDfle1eNrfifEoNPtnFS2CgeyUcbvgpB1OuUugHN_y5L1tsCRoGbb6gCNJpOIMBB-7z8p8HKdWfGn4_zjYSNTMfl4o2-fzCcgXafeo2ycsMXInvdxj2NHYufrtCG9tkyP_Lw3GqNfb5gStCF32dwjiKqJG5YxLg_y9ln9x18V38KOxQAHS1k63uWjmzOrrfv1E-7nGnINAqyUcKYRtV3ZrhtQKMyjY8Hj-ta9V7xMJ4qvQ9jwYbpzlZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"selectedAgent\": \"string\",\r\n  \"period\": 1,\r\n  \"orderBy\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/aia-pes/pos/get-all-pos-pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"aia-pes",
+								"pos",
+								"get-all-pos-pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllClaimsPending",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzc29JZCI6IkVkUmZyTkhybWR0eS9BV292N3dMWmdLTE1TOWxQSjZyQStwOGl0eCtjT1RoOXk2SFpZVldpblU5c2VRdi9Pb0dyVXN4dVphQXNGNHcxQXNVU09ZaXZGRWJxWmNjRms4TFhOTlBTQzJSd3plbjRBOGU0RCtMNUxKd2hweWtnbUJQa3cvei9MWUhONVA0RFU0aHkwRWFoVk81akJtbmN0aUZnSnhoenI5RWxDQlZaUzJiZE5wbVhobm14NFplcDdqVU82bFhob0UzSEs5OVBjd1JBVWpINTNhN1lNSzh4Y1F0OWFVSmd4VnJWUEVIa3FhQTJIRFZ3a1lhaENobmRmb0NPMzFNVENvUUl4dUtCbUYrN2V4MThUWCtrN2lMNzRqVXhmQzRWSEczT1JhQlVhbzF6M2Y4Vzh3bi8wR2Z5ZERhYUNKaG4vWWRqRnBsbE9IUWFIckpuQT09IiwiZXBsIjoiRHpzZllYMTdvT0ZOVFFXSnVBZHZMVHpUWlBQcWxhU21nbFVtUFRtam5jMFd5aVRrOFhvT2ZiemErMEpRK0duL3VPZ0R3T1ltWkFqN0twZkZSUHVJbWJKQk1kQlJpc0RzbUxtYWdsc2FxNkRGcTJIWDV6QlVqZ2ErdlJJNG1aVThwc0JOaXY5SG9QK3hVUjA5WG9HaFVzc2dpWTRVOTVkSEwyWExua0lHMTNrQ3I2eUtpTUFLQmlrOTZzOGhraGM5TUNuTjNvaE9NTU9KWFJUd2NkM1pFbmtvbGNvL3Jqc1REeTJYOXhjYXVBTUJHRDI5ci9jU2UxRHVFajI1d1NDU2g0LzFUTFhIMm5rTVVuTFZOMldDOGFxV252QjdqTkZBVFBMTVNTRnZDZXJnSDFIakloclBFK2V4YlRtSmVsNVE0bkQvYkk5M0tsYzBXMlJZc0ZJbkFRPT0iLCJlaWQiOiJUbmtuTFRPMEc2ZVN1Nm9hOGQvVnBoeHhaazI1UDFtNGhSc0tzZ3JTV21uWDdYaFpHWTJKbEthNUNIZHNJVVZLb2NpU0VDeFJLeHBBQXUzZFdWOXU0V0crdWZYQWtoaXh4R1dyTUpzTnVpOUpjQlVOb3haY2dGWFVOMllFS0gzaGpQWTlTS3ZmM2hMa0dzV2d6TmVGcDM3R3dPN2NrSGE4V3RJeDNTZ3RTeUhrYjNMZWRPQmkwTXNxOWljdkdLWjUwNno4d3JkSmRhYU9ReVZBbXhtU0hZekNNUXVPRnNPUjZhNVkwVklicXN3KzJxRTJMa3dCOXhoUTBXMzR2czcxcmRVcXNDRmRFR2UxWXBwMlFobzUrNHhUVUwrNE5mR216bHhnVC8xRVlyTmdITWRRQnptekJnWnZkVTJFV1dZNUtSVldybG83dUd6WTRsUnVsbTJGUkE9PSIsInZlciI6ImdxOWN4SWhNaXIvL2xqQzZYU2x2MjRkMlU1WUpGOU1Ba1I4anFUc1RPdTFjVjVmUklsVmEzdk5WVzc0ck1JQ01GeU9kZ25UaDd4UjJ5bDRvK0pnSER0N0FjcVNpZzdGdWxhbmVmUXJDc1FaMEpzOWh6WkpTa2xOM3NvOHI1bHV4aHlKV2ROd05yYzJNNDR1MEZ5M0NyY1UvbFhPR05kKzU4NS90bEtJQy9zYUgrY2Z1bE9lRXFiTmJaZ3RycnJOaEl0ck1yQ0oxTGFmMjQ2TU9icVJNanhaVXJaSnl4VGs4a1JEYTgzSEx2QzAxZzhRZG5oYnkwL2dHYzZhWTZ0TkxtQUhuRmlSbnBUaDkybmVUVzF2b0RxSlJrOEhmT0lDMzg2MlVCTHNKOS95Q3VxU1dkTGVNWm10QWVVUmFZeVpPWm5mZUhmLzRmcUFRalR3dEpXWEs0Zz09Iiwic3RmIjoiWS9Ya3BROUh1TWpXMHZEWVZhYWZHaFRsRExBQUtOUUVxZmFZQ1JKWTFwcGh3b0ExSWtzbU50THo3T1VMT0R2MEk2b1JXYkxPWlZqMEtsWmI3OG9EdVJkc0djc3BkT2RpY3BqRmhhUFkvc1gvM2h1QWtua3JjYThuZEVXdnpISEdYVkVmY0hlNU1qTCt0RU5RK0daR2lYZjU0elJTYnUzQ0ZhdzA0d2xzRmYwSDlMdHk2S1laQmxaVGxWSCt2SHhVV1h6NUQrSURqN0JqUll0ZDE4bXBWd1ZEcVU0a284cVY5dGZ1cnBmNUJNZ0M0aVdoaFhyakY5RCtodWpabVJCZ3M2bFViZSswR1ZkYzk5d1p2U1BNM09kNVBoUWZ6eldCTXhXTWFySlRJbFdacTk3VUc2enY4U1k3cmtkQ2ViWFQwaWlFL1RJWTl6SlNBeTNrb1daRDZ3PT0iLCJjaG4iOiJhcGJxODhQYkhWMS82dXNMaFU4R05pYXg3bEFGbTZyQnhIZ25qTkxCbjVaWjYwT1RhZEpIWHpJUDJVczM5Q1NhenBPNGNHb0VUM2ZJZFZKbkJldFhXVVU4UllxNndHRCt3QS9yYW5WVVpkRUg1d2Q3VlNYTFpTb3hQdGRWNUxldkdDYUJkWmoza2hGWVpTUVRxRy9KQ0F1OFRKNHROWWJYQkFqaWZXNm1vYTRqbllzU1c5cnpXOHpQZTdKcFFWRFRza1FnZ2E3MjZnd0JYSDcrbUhyWDB2M0NMWDZKUDFBYjU1VkFzb2tvcUJLVG56dzZ1U0svMU5UQXg0WXJYVnVYWjZ3QUpiMERFU1BuYjFqQ0lOYzlRWkVUVHlFY3ZNTUV3SnpYODFaOEhnN0RLa29jckJRUmdmRGdOa0R3Uktzb0pESjBoTlNtckpvWDdVYysxaEM4VXc9PSIsImlzcyI6IkNvbW1vblRva2VuIiwicHRJZCI6IlJCUFE3MUpKNWFlUU8zaDRzTVpMcUFrbFh1cjJrc0N6U1JiWWRtL1pYT3p2UDBJNFd2NkM3K3ZEQ0Qxb1czM2V0bkJwZ1A0ZDZsRW9WeWIyUmE0OGNKYU5PS0JmN1R3c05LUUhqNjhjTmhpaks1ZnpoMDY1L2hEMllnYTZnTWdPVjkyekRtZEE1dzFoOGdZMTdabWZ4RG1uZFArU2dBVnJBMDgvQnhKdzd2YnNHbGdMOGNNaXFObXh0RVhwOGJoQ3BNb1FoN1I2UVF3cmRtbUo1S2RnZlZjVEFyUWppMzY1RDJER3MwaFR1UUJFZzM3R0pnYVpSeE9iMkxseFc0eHZuTE1ZcVVsQk9ObThub2R5bzFmTjBUbHRtSCs1cHF3ME9yQjMyNW9pMUV1OVNvM0xXZlRvbUFQUEEreU5ENEYzbUZpcXNkNnpSNnphdjduSHR5YSs2QT09Iiwic2lkIjoiRHFwdXc3WjlHekNkNzVaVlFjNVNIbUhuam82eXhzRFJZV1RrR1hSODFTaW1STENabkFpbDlYWWtqRWkwa0VoWjQrb0pHT0hpQmhKcjgrSTRnV3VTRFZuSjgwZ3hEVXNWY1R4TGNscFN6d3MyVDM0TjQvWXhHemdWRjFoRXJwMmFCY0creTRkUTNwR2xwb25qZ1dFeFppc0Noa0RlYzBFemxuU0hJSlpneWMwV3ZOTHVNcmoyZ0lSNGZkV0luSkkycnd6elAzR0ZaSE0zQnZQbWdUN2ZFcnp0UHVDVUxqajFITEtBTXJqZ1RlOWZJYm5qYmhMNmFFbFk3ZmVQNVpGNnhQejI2RDZuY1pvdStmdVNPU05OZkFLUWpQZEFneUsvbldFYjZHbEIyWjdteTRsd080TWxlSDdJdm1sbGlXb3duOCtHUCttbFlFRW4zNFl6c3lrZkZnPT0iLCJlY2wiOiJJMEtsL0w0cU1OOGVkNnZ4UVhoV3V5dFg0eCszZHpPRXJDM1F1dkMrM1Nqa1JqMjNManlEMHpUdHYvdnR0ZncvWWVCYi9KWDMya0w1YjNLcnBIaGFNSktXQklUN2NtYTBhRGpXKzE2Q3BZYlJtejdPazV6V3hXS0ZkOGhpaDlMZUxiNWlGWEVaeUU0S0xxSmovQ1BITTROZVZGclRab3g1Rmh1UGE5SlhHY203WVU4S0dKQk1zdk05RDhqZXJOMXRRWm9XVnpOYUlPOUovV25iZktIakluNkJwdDZTdEN6a3ZlYUlvQittRGg3NVIwb29jU24raHY1Y2pOekJ0UnE0YzJSaU56Q1BoUmVwZVRPSmZmZC9GbUp1R28xV3ZRV2c4K2RiSCsrdk5yVGFoNnJUTUhuZjFNendvWW9PWVl0NExwWGdHck9NR1hLSndMNHh1bnpkUVE9PSIsInZpZCI6IlN6UmsvSHhxN2xXWVRjSkl5Z1lrOGVDaDJtSTBLZGdsZ2pNV0h1OUhPdUNFSHdERTkwd05oKzBLNzhHSlRwakpDaVF4SUFYK0VINEMyVzN2ZHRiYktsY1NCQzU4NmpjaW1VR25NYjBpSUxCcmtUdnR2WWp5TGMwK2dTbW5nRFEwVVN0VlpuNjdRWDloK0swbWw0SjJaTzQ2VXFKR3FhVFk1aVBnbktRMnZIL25MUWV5Rm1qbEdYcjZRRnhIRTRHRWlWM1p5VlpuaHFEUWJFM2dxNTRSZjFiTHBoRkMrbzB4S20zcmpYNk1sSWZLUGRrSlpmaXJ5M1VRY0FpL2h0Z0FhWENMNVJiRWxxcnhvNzNlK2xPdWluTHI3Y1ZGVms2SHE2ZGVRckUwcFg1VlZqcjRIQkVHMGZra0VDb0Q0SDVMbkR1Q29lT0E2MUo1c3JiSEZyL1BnQT09IiwiYXVkIjoiZWZvcm0iLCJjY0lkIjoiSnpQWENZVjFtSnVaUGQrOS82WjNCNG85eitOdTZOQzZQRW1zc0NGZWlsYUE4VjI0VHNFWVVLUE96N1Q5Z1VoUVUzcmZ5T2xSZHZXTXl6MDJVVmtyQWkvc3RSNW9kVEFUcEMyN3pybGVvMUZ6aTI4ZGcrRXF1dmpwV3BTN3RaT2lGZHp1UVBzSnJQMUpxam9CZGNjWUlCNlVId0FxRWpyZUVNcmpsSjI2ekpNTFIxWnhuZ21DQmJsTnR5Vk91TTlsZWlMN0xVMkhxeHdhTC9WWXRzREFxTGVWY1NQcDZaR2l4UnQ4TnZpMlhzWnhHalc2eGJXUDJScWIrYXZvUk1rbzdONWh2YTUrcTZrem94MDk2ZFh5YU00Q0ZsbVdWWWJKRGp6akZoY2dsZXhtcCthUDJKS0REcFpzMDk4cFJEWDJiRkJPVVphNHpoYmJGU1NGdG1NNjR3PT0iLCJlY3IiOiJXTnRiS201SlBGMmVUdTZ3MTArZDlkQjFIRDBHd0pEcEYxeDhWVXJEb0laSTgya2o1QU45NUQxZEFPSlVpZVdrMERIYjI5eDd6eEFtT3NmVzJ0bUNjNjMrZnp5cnUyWFBDSnN0Nkt6Y0pZZEFMc201YnUwQW1sOHU1b1pKTzIzK0JRQUl4ditVRXZVcHBPOU5nQUowUWkyTUFKOVRHL0JhcEVzZ3VsdHZJQTVDTm5XT25EQWc4VWpYajNvZmpndm5FeU0ydE9lZVdTSHFLblVOdDlVRWs3SWNFcjh2L21VNDBqSDgzZTFOZGlKbks2Wm1lcFZ0UlVZdVVqNm9JR0VMRVdWQlhTVHlKZEhnRXdOVTVUVk1PVjN6TEVEZUFUa1JqMWVSQWViT2lsV3ZDNWNMKzFUSGVDSzA4Z1JjZUE1N3dDbGxNcWlmbDdoaXdTbHMrWVpaTnc9PSIsInBhcnR5SWQiOiJLZktaTHNnQi9vZFp2a2o4cWsyT1BsYjFxM1E4dVRhN3lvbEVWNGF6SWFHbTZsOU1MSXZzeC9OZEduNzlJOG9pWWpoM3dPUDdGRXo2aHE2SUpFUlYxZStmY0pORzQrcnUrb29oVFQwd3VCNVl6dTNtTEZ5QWdCRlI1MFFnMjVXNTM3dVJaeVBxYlMva0p6UUVqOGhWSUdwWXFueUlwVDBhbFk0U0JDTjJERmhaN2tDbmp3NUNOMk8xY0pyTFdLZGtEU2dnUmhLOGxZRC9ydDBHYnB1Qi9KaitwTzIyamwwNU50Z1FQVitTeTI5Y3MwZFJZbzNkbGExdUdXakFkRFk2SWhqUk5OZEVoL1YzZCsxS3NZRzJ1N05IeDh2RmhjMkJ2SHBHRXoxT3JDeGZtSGhMN2NLbGluZ05yZHBZQVQzR0s0MDdzRHV4czNRWENvTnNEampQN3c9PSIsImV4cCI6MTY1MjEzMzE2OCwiYWlkIjoiRVFPQnY2US9sSEgvSkpadFc0SzNoblRNRjZzaFZveW9zNjQwNUhzc0MvaHloajU2U28vQlZERW9SZDRHcWs4NHBpVnVGZUpvektVSEtQSklQYU02RDRMNEVnM0h5VklBMHF5SUMwYVNhMzFYNTlLTnFBQmlMTlBybVFJUEt6V0VCencrbWRxakJITHJQd0dQNFZTR2ZTUmphRVhsVktNY3NENzRNaGFaYmR5cWh2NUlISGkyT2NPZFMyWUVtdlNiWEtkOU5qM0VUK3VCNm9OSXJrKzUwWUw1NFBUbnd0cHNMQllEMjRLNi92VVdkd0FnWGVpMThpd1pwUlVpUmc1ejBNT2lFZjk3RjA4RWNSdGhSTUVBbmhGMmZxYUNyK0RwSHpMbGJvMTZWOHBGQTlGeStueUw4WFh4UzZIRlFPQTJXVWZ6WDgvcldsK3k1Mm84c2NTT1RBPT0iLCJpYXQiOjE2NDk5ODU2ODUsImF0ciI6IkVZK2JDNzlEUGVMaVFrWVNHa1VpQWFSRWdIdnQxSDlTS01ZQ05VcWZpWXo2ZUFOZEt6OTMrRXIyOTMyMnl2bVo5UGQzbGxpclE2WXZpL3VkSER5OXBseWxlRXRqTnF4c0FSc3BJc1BUMWJodWJTNjNuS3RIU0hhSzFPdHlQRHF4R1MxTzEwVWV4RmVwR1M5SG90aGhjQnQ0R1N3N0FpQmZJc1AxeFIxR0ZwR0ZUdGd6aUFlNjhkV2szaVJTWm9NdHJlSEdxTWJNT0oyZWVNRE1RWmZNU1BWYXhlaVRRQ3JhenZnaVhEQnU1K3psUmNVUllFQXZsMXVCbk4wM1NNTUhHQlM2NFA0M2dpSkM2R2tnSmhMSGZPSXk2QXg1Y1J3THloL253WVc3UnFpZVRZVVRUQ29WV0ZPNVRzbWVkOHRBUUZQdHgxOEk5MDFyVFFlbnErSWUyQT09In0.DEwCZDrg57n4oqiCaqYrkpLXq7pddKC9OsT18tS2jscmeNpvvBLjpER_RiKRbQYIbRJNvuefieH_f_KiKNW5iYiF-zI44BmDfle1eNrfifEoNPtnFS2CgeyUcbvgpB1OuUugHN_y5L1tsCRoGbb6gCNJpOIMBB-7z8p8HKdWfGn4_zjYSNTMfl4o2-fzCcgXafeo2ycsMXInvdxj2NHYufrtCG9tkyP_Lw3GqNfb5gStCF32dwjiKqJG5YxLg_y9ln9x18V38KOxQAHS1k63uWjmzOrrfv1E-7nGnINAqyUcKYRtV3ZrhtQKMyjY8Hj-ta9V7xMJ4qvQ9jwYbpzlZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"selectedAgent\": \"string\",\r\n  \"period\": 1,\r\n  \"orderBy\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/aia-pes/claims/get-all-claims-pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"aia-pes",
+								"claims",
+								"get-all-claims-pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzc29JZCI6IkVkUmZyTkhybWR0eS9BV292N3dMWmdLTE1TOWxQSjZyQStwOGl0eCtjT1RoOXk2SFpZVldpblU5c2VRdi9Pb0dyVXN4dVphQXNGNHcxQXNVU09ZaXZGRWJxWmNjRms4TFhOTlBTQzJSd3plbjRBOGU0RCtMNUxKd2hweWtnbUJQa3cvei9MWUhONVA0RFU0aHkwRWFoVk81akJtbmN0aUZnSnhoenI5RWxDQlZaUzJiZE5wbVhobm14NFplcDdqVU82bFhob0UzSEs5OVBjd1JBVWpINTNhN1lNSzh4Y1F0OWFVSmd4VnJWUEVIa3FhQTJIRFZ3a1lhaENobmRmb0NPMzFNVENvUUl4dUtCbUYrN2V4MThUWCtrN2lMNzRqVXhmQzRWSEczT1JhQlVhbzF6M2Y4Vzh3bi8wR2Z5ZERhYUNKaG4vWWRqRnBsbE9IUWFIckpuQT09IiwiZXBsIjoiRHpzZllYMTdvT0ZOVFFXSnVBZHZMVHpUWlBQcWxhU21nbFVtUFRtam5jMFd5aVRrOFhvT2ZiemErMEpRK0duL3VPZ0R3T1ltWkFqN0twZkZSUHVJbWJKQk1kQlJpc0RzbUxtYWdsc2FxNkRGcTJIWDV6QlVqZ2ErdlJJNG1aVThwc0JOaXY5SG9QK3hVUjA5WG9HaFVzc2dpWTRVOTVkSEwyWExua0lHMTNrQ3I2eUtpTUFLQmlrOTZzOGhraGM5TUNuTjNvaE9NTU9KWFJUd2NkM1pFbmtvbGNvL3Jqc1REeTJYOXhjYXVBTUJHRDI5ci9jU2UxRHVFajI1d1NDU2g0LzFUTFhIMm5rTVVuTFZOMldDOGFxV252QjdqTkZBVFBMTVNTRnZDZXJnSDFIakloclBFK2V4YlRtSmVsNVE0bkQvYkk5M0tsYzBXMlJZc0ZJbkFRPT0iLCJlaWQiOiJUbmtuTFRPMEc2ZVN1Nm9hOGQvVnBoeHhaazI1UDFtNGhSc0tzZ3JTV21uWDdYaFpHWTJKbEthNUNIZHNJVVZLb2NpU0VDeFJLeHBBQXUzZFdWOXU0V0crdWZYQWtoaXh4R1dyTUpzTnVpOUpjQlVOb3haY2dGWFVOMllFS0gzaGpQWTlTS3ZmM2hMa0dzV2d6TmVGcDM3R3dPN2NrSGE4V3RJeDNTZ3RTeUhrYjNMZWRPQmkwTXNxOWljdkdLWjUwNno4d3JkSmRhYU9ReVZBbXhtU0hZekNNUXVPRnNPUjZhNVkwVklicXN3KzJxRTJMa3dCOXhoUTBXMzR2czcxcmRVcXNDRmRFR2UxWXBwMlFobzUrNHhUVUwrNE5mR216bHhnVC8xRVlyTmdITWRRQnptekJnWnZkVTJFV1dZNUtSVldybG83dUd6WTRsUnVsbTJGUkE9PSIsInZlciI6ImdxOWN4SWhNaXIvL2xqQzZYU2x2MjRkMlU1WUpGOU1Ba1I4anFUc1RPdTFjVjVmUklsVmEzdk5WVzc0ck1JQ01GeU9kZ25UaDd4UjJ5bDRvK0pnSER0N0FjcVNpZzdGdWxhbmVmUXJDc1FaMEpzOWh6WkpTa2xOM3NvOHI1bHV4aHlKV2ROd05yYzJNNDR1MEZ5M0NyY1UvbFhPR05kKzU4NS90bEtJQy9zYUgrY2Z1bE9lRXFiTmJaZ3RycnJOaEl0ck1yQ0oxTGFmMjQ2TU9icVJNanhaVXJaSnl4VGs4a1JEYTgzSEx2QzAxZzhRZG5oYnkwL2dHYzZhWTZ0TkxtQUhuRmlSbnBUaDkybmVUVzF2b0RxSlJrOEhmT0lDMzg2MlVCTHNKOS95Q3VxU1dkTGVNWm10QWVVUmFZeVpPWm5mZUhmLzRmcUFRalR3dEpXWEs0Zz09Iiwic3RmIjoiWS9Ya3BROUh1TWpXMHZEWVZhYWZHaFRsRExBQUtOUUVxZmFZQ1JKWTFwcGh3b0ExSWtzbU50THo3T1VMT0R2MEk2b1JXYkxPWlZqMEtsWmI3OG9EdVJkc0djc3BkT2RpY3BqRmhhUFkvc1gvM2h1QWtua3JjYThuZEVXdnpISEdYVkVmY0hlNU1qTCt0RU5RK0daR2lYZjU0elJTYnUzQ0ZhdzA0d2xzRmYwSDlMdHk2S1laQmxaVGxWSCt2SHhVV1h6NUQrSURqN0JqUll0ZDE4bXBWd1ZEcVU0a284cVY5dGZ1cnBmNUJNZ0M0aVdoaFhyakY5RCtodWpabVJCZ3M2bFViZSswR1ZkYzk5d1p2U1BNM09kNVBoUWZ6eldCTXhXTWFySlRJbFdacTk3VUc2enY4U1k3cmtkQ2ViWFQwaWlFL1RJWTl6SlNBeTNrb1daRDZ3PT0iLCJjaG4iOiJhcGJxODhQYkhWMS82dXNMaFU4R05pYXg3bEFGbTZyQnhIZ25qTkxCbjVaWjYwT1RhZEpIWHpJUDJVczM5Q1NhenBPNGNHb0VUM2ZJZFZKbkJldFhXVVU4UllxNndHRCt3QS9yYW5WVVpkRUg1d2Q3VlNYTFpTb3hQdGRWNUxldkdDYUJkWmoza2hGWVpTUVRxRy9KQ0F1OFRKNHROWWJYQkFqaWZXNm1vYTRqbllzU1c5cnpXOHpQZTdKcFFWRFRza1FnZ2E3MjZnd0JYSDcrbUhyWDB2M0NMWDZKUDFBYjU1VkFzb2tvcUJLVG56dzZ1U0svMU5UQXg0WXJYVnVYWjZ3QUpiMERFU1BuYjFqQ0lOYzlRWkVUVHlFY3ZNTUV3SnpYODFaOEhnN0RLa29jckJRUmdmRGdOa0R3Uktzb0pESjBoTlNtckpvWDdVYysxaEM4VXc9PSIsImlzcyI6IkNvbW1vblRva2VuIiwicHRJZCI6IlJCUFE3MUpKNWFlUU8zaDRzTVpMcUFrbFh1cjJrc0N6U1JiWWRtL1pYT3p2UDBJNFd2NkM3K3ZEQ0Qxb1czM2V0bkJwZ1A0ZDZsRW9WeWIyUmE0OGNKYU5PS0JmN1R3c05LUUhqNjhjTmhpaks1ZnpoMDY1L2hEMllnYTZnTWdPVjkyekRtZEE1dzFoOGdZMTdabWZ4RG1uZFArU2dBVnJBMDgvQnhKdzd2YnNHbGdMOGNNaXFObXh0RVhwOGJoQ3BNb1FoN1I2UVF3cmRtbUo1S2RnZlZjVEFyUWppMzY1RDJER3MwaFR1UUJFZzM3R0pnYVpSeE9iMkxseFc0eHZuTE1ZcVVsQk9ObThub2R5bzFmTjBUbHRtSCs1cHF3ME9yQjMyNW9pMUV1OVNvM0xXZlRvbUFQUEEreU5ENEYzbUZpcXNkNnpSNnphdjduSHR5YSs2QT09Iiwic2lkIjoiRHFwdXc3WjlHekNkNzVaVlFjNVNIbUhuam82eXhzRFJZV1RrR1hSODFTaW1STENabkFpbDlYWWtqRWkwa0VoWjQrb0pHT0hpQmhKcjgrSTRnV3VTRFZuSjgwZ3hEVXNWY1R4TGNscFN6d3MyVDM0TjQvWXhHemdWRjFoRXJwMmFCY0creTRkUTNwR2xwb25qZ1dFeFppc0Noa0RlYzBFemxuU0hJSlpneWMwV3ZOTHVNcmoyZ0lSNGZkV0luSkkycnd6elAzR0ZaSE0zQnZQbWdUN2ZFcnp0UHVDVUxqajFITEtBTXJqZ1RlOWZJYm5qYmhMNmFFbFk3ZmVQNVpGNnhQejI2RDZuY1pvdStmdVNPU05OZkFLUWpQZEFneUsvbldFYjZHbEIyWjdteTRsd080TWxlSDdJdm1sbGlXb3duOCtHUCttbFlFRW4zNFl6c3lrZkZnPT0iLCJlY2wiOiJJMEtsL0w0cU1OOGVkNnZ4UVhoV3V5dFg0eCszZHpPRXJDM1F1dkMrM1Nqa1JqMjNManlEMHpUdHYvdnR0ZncvWWVCYi9KWDMya0w1YjNLcnBIaGFNSktXQklUN2NtYTBhRGpXKzE2Q3BZYlJtejdPazV6V3hXS0ZkOGhpaDlMZUxiNWlGWEVaeUU0S0xxSmovQ1BITTROZVZGclRab3g1Rmh1UGE5SlhHY203WVU4S0dKQk1zdk05RDhqZXJOMXRRWm9XVnpOYUlPOUovV25iZktIakluNkJwdDZTdEN6a3ZlYUlvQittRGg3NVIwb29jU24raHY1Y2pOekJ0UnE0YzJSaU56Q1BoUmVwZVRPSmZmZC9GbUp1R28xV3ZRV2c4K2RiSCsrdk5yVGFoNnJUTUhuZjFNendvWW9PWVl0NExwWGdHck9NR1hLSndMNHh1bnpkUVE9PSIsInZpZCI6IlN6UmsvSHhxN2xXWVRjSkl5Z1lrOGVDaDJtSTBLZGdsZ2pNV0h1OUhPdUNFSHdERTkwd05oKzBLNzhHSlRwakpDaVF4SUFYK0VINEMyVzN2ZHRiYktsY1NCQzU4NmpjaW1VR25NYjBpSUxCcmtUdnR2WWp5TGMwK2dTbW5nRFEwVVN0VlpuNjdRWDloK0swbWw0SjJaTzQ2VXFKR3FhVFk1aVBnbktRMnZIL25MUWV5Rm1qbEdYcjZRRnhIRTRHRWlWM1p5VlpuaHFEUWJFM2dxNTRSZjFiTHBoRkMrbzB4S20zcmpYNk1sSWZLUGRrSlpmaXJ5M1VRY0FpL2h0Z0FhWENMNVJiRWxxcnhvNzNlK2xPdWluTHI3Y1ZGVms2SHE2ZGVRckUwcFg1VlZqcjRIQkVHMGZra0VDb0Q0SDVMbkR1Q29lT0E2MUo1c3JiSEZyL1BnQT09IiwiYXVkIjoiZWZvcm0iLCJjY0lkIjoiSnpQWENZVjFtSnVaUGQrOS82WjNCNG85eitOdTZOQzZQRW1zc0NGZWlsYUE4VjI0VHNFWVVLUE96N1Q5Z1VoUVUzcmZ5T2xSZHZXTXl6MDJVVmtyQWkvc3RSNW9kVEFUcEMyN3pybGVvMUZ6aTI4ZGcrRXF1dmpwV3BTN3RaT2lGZHp1UVBzSnJQMUpxam9CZGNjWUlCNlVId0FxRWpyZUVNcmpsSjI2ekpNTFIxWnhuZ21DQmJsTnR5Vk91TTlsZWlMN0xVMkhxeHdhTC9WWXRzREFxTGVWY1NQcDZaR2l4UnQ4TnZpMlhzWnhHalc2eGJXUDJScWIrYXZvUk1rbzdONWh2YTUrcTZrem94MDk2ZFh5YU00Q0ZsbVdWWWJKRGp6akZoY2dsZXhtcCthUDJKS0REcFpzMDk4cFJEWDJiRkJPVVphNHpoYmJGU1NGdG1NNjR3PT0iLCJlY3IiOiJXTnRiS201SlBGMmVUdTZ3MTArZDlkQjFIRDBHd0pEcEYxeDhWVXJEb0laSTgya2o1QU45NUQxZEFPSlVpZVdrMERIYjI5eDd6eEFtT3NmVzJ0bUNjNjMrZnp5cnUyWFBDSnN0Nkt6Y0pZZEFMc201YnUwQW1sOHU1b1pKTzIzK0JRQUl4ditVRXZVcHBPOU5nQUowUWkyTUFKOVRHL0JhcEVzZ3VsdHZJQTVDTm5XT25EQWc4VWpYajNvZmpndm5FeU0ydE9lZVdTSHFLblVOdDlVRWs3SWNFcjh2L21VNDBqSDgzZTFOZGlKbks2Wm1lcFZ0UlVZdVVqNm9JR0VMRVdWQlhTVHlKZEhnRXdOVTVUVk1PVjN6TEVEZUFUa1JqMWVSQWViT2lsV3ZDNWNMKzFUSGVDSzA4Z1JjZUE1N3dDbGxNcWlmbDdoaXdTbHMrWVpaTnc9PSIsInBhcnR5SWQiOiJLZktaTHNnQi9vZFp2a2o4cWsyT1BsYjFxM1E4dVRhN3lvbEVWNGF6SWFHbTZsOU1MSXZzeC9OZEduNzlJOG9pWWpoM3dPUDdGRXo2aHE2SUpFUlYxZStmY0pORzQrcnUrb29oVFQwd3VCNVl6dTNtTEZ5QWdCRlI1MFFnMjVXNTM3dVJaeVBxYlMva0p6UUVqOGhWSUdwWXFueUlwVDBhbFk0U0JDTjJERmhaN2tDbmp3NUNOMk8xY0pyTFdLZGtEU2dnUmhLOGxZRC9ydDBHYnB1Qi9KaitwTzIyamwwNU50Z1FQVitTeTI5Y3MwZFJZbzNkbGExdUdXakFkRFk2SWhqUk5OZEVoL1YzZCsxS3NZRzJ1N05IeDh2RmhjMkJ2SHBHRXoxT3JDeGZtSGhMN2NLbGluZ05yZHBZQVQzR0s0MDdzRHV4czNRWENvTnNEampQN3c9PSIsImV4cCI6MTY1MjEzMzE2OCwiYWlkIjoiRVFPQnY2US9sSEgvSkpadFc0SzNoblRNRjZzaFZveW9zNjQwNUhzc0MvaHloajU2U28vQlZERW9SZDRHcWs4NHBpVnVGZUpvektVSEtQSklQYU02RDRMNEVnM0h5VklBMHF5SUMwYVNhMzFYNTlLTnFBQmlMTlBybVFJUEt6V0VCencrbWRxakJITHJQd0dQNFZTR2ZTUmphRVhsVktNY3NENzRNaGFaYmR5cWh2NUlISGkyT2NPZFMyWUVtdlNiWEtkOU5qM0VUK3VCNm9OSXJrKzUwWUw1NFBUbnd0cHNMQllEMjRLNi92VVdkd0FnWGVpMThpd1pwUlVpUmc1ejBNT2lFZjk3RjA4RWNSdGhSTUVBbmhGMmZxYUNyK0RwSHpMbGJvMTZWOHBGQTlGeStueUw4WFh4UzZIRlFPQTJXVWZ6WDgvcldsK3k1Mm84c2NTT1RBPT0iLCJpYXQiOjE2NDk5ODU2ODUsImF0ciI6IkVZK2JDNzlEUGVMaVFrWVNHa1VpQWFSRWdIdnQxSDlTS01ZQ05VcWZpWXo2ZUFOZEt6OTMrRXIyOTMyMnl2bVo5UGQzbGxpclE2WXZpL3VkSER5OXBseWxlRXRqTnF4c0FSc3BJc1BUMWJodWJTNjNuS3RIU0hhSzFPdHlQRHF4R1MxTzEwVWV4RmVwR1M5SG90aGhjQnQ0R1N3N0FpQmZJc1AxeFIxR0ZwR0ZUdGd6aUFlNjhkV2szaVJTWm9NdHJlSEdxTWJNT0oyZWVNRE1RWmZNU1BWYXhlaVRRQ3JhenZnaVhEQnU1K3psUmNVUllFQXZsMXVCbk4wM1NNTUhHQlM2NFA0M2dpSkM2R2tnSmhMSGZPSXk2QXg1Y1J3THloL253WVc3UnFpZVRZVVRUQ29WV0ZPNVRzbWVkOHRBUUZQdHgxOEk5MDFyVFFlbnErSWUyQT09In0.DEwCZDrg57n4oqiCaqYrkpLXq7pddKC9OsT18tS2jscmeNpvvBLjpER_RiKRbQYIbRJNvuefieH_f_KiKNW5iYiF-zI44BmDfle1eNrfifEoNPtnFS2CgeyUcbvgpB1OuUugHN_y5L1tsCRoGbb6gCNJpOIMBB-7z8p8HKdWfGn4_zjYSNTMfl4o2-fzCcgXafeo2ycsMXInvdxj2NHYufrtCG9tkyP_Lw3GqNfb5gStCF32dwjiKqJG5YxLg_y9ln9x18V38KOxQAHS1k63uWjmzOrrfv1E-7nGnINAqyUcKYRtV3ZrhtQKMyjY8Hj-ta9V7xMJ4qvQ9jwYbpzlZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/aia-pes/policies/{1}/get-payment-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"aia-pes",
+								"policies",
+								"{1}",
+								"get-payment-info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
